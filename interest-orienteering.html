@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>定向越野 · 周乐曈</title>
+<meta name="description" content="定向越野：拿着地图在真实的森林与村落里，按顺序找齐打卡点。地图图例、装备、场地图集。">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* 图例条：专属的小组件 */
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; }
+  .legend__item {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: rgba(255,255,255,.86); border: 1px solid var(--line);
+    border-radius: 12px; padding: 8px 14px 8px 9px;
+    font-size: 13px; color: var(--ink-2);
+  }
+  .legend__item i {
+    width: 30px; height: 30px; flex: 0 0 auto; display: block;
+    background: var(--paper-2); border-radius: 8px;
+    border: 1px solid var(--line);
+  }
+  .legend__item svg { display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wc-soft" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="3" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">曈</span>
+      <span class="brand__text">周乐曈<em>Zhou Letong</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#about">简介</a>
+      <a href="index.html#interests">兴趣</a>
+      <a href="index.html#honor">荣誉</a>
+      <a href="index.html#works">作品</a>
+      <a href="index.html#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap detail-hero">
+    <a class="backlink" href="index.html#interests">← 返回首页 · 兴趣标签</a>
+    <div class="detail-hero__grid">
+      <div>
+        <h1>定向越野</h1>
+        <p class="lead">
+          拿着一张地图，根据图上的指示，在现实的森林与村落中寻找图上标出的许多打卡点。
+          需要运动员时时刻刻精准定位自己，在地图中找出最短路径、找准方向、克服野外的各种障碍，
+          最终按顺序找到打卡点。它考验运动员的<strong>识图能力、细心程度、穿越野外的勇气和能力、
+          以及长跑体能</strong>。
+        </p>
+        <div class="chips" style="margin-top:22px">
+          <span class="chip chip--sage">短距离 / 中距离 / 长距离</span>
+          <span class="chip">按顺序打卡</span>
+          <span class="chip chip--purple">用时最短者胜</span>
+        </div>
+      </div>
+
+      <!-- 地图 · 指北针 · 点标旗 水彩涂鸦 -->
+      <figure class="doodle" style="margin:0">
+        <svg viewBox="0 0 300 212" style="width:100%;max-width:360px;margin:0 auto" role="img"
+             aria-label="定向越野地图、指北针与橙白点标旗的水彩涂鸦">
+          <ellipse cx="150" cy="188" rx="126" ry="20" fill="#E2D7F1" opacity=".5" filter="url(#wc-soft)"/>
+
+          <!-- 地图图幅 -->
+          <g transform="rotate(-4 150 105)">
+            <rect x="30" y="24" width="240" height="160" rx="7"
+                  fill="#FDFAF4" stroke="#D6E1EA" stroke-width="2"/>
+
+            <!-- 林地 -->
+            <path d="M46 58 q28 -15 55 -3 q24 11 9 32 q-15 22 -47 13 q-32 -9 -17 -42 z"
+                  fill="#DCEBD8" filter="url(#wc)"/>
+            <path d="M168 128 q31 -11 54 6 q19 15 -4 32 q-25 17 -48 2 q-21 -15 -2 -40 z"
+                  fill="#DCEBD8" filter="url(#wc)"/>
+
+            <!-- 水体 -->
+            <path d="M198 48 q27 -9 42 8 q13 17 -8 28 q-25 13 -40 -6 q-11 -17 6 -30 z"
+                  fill="#B6D5EC" filter="url(#wc)"/>
+
+            <!-- 等高线 -->
+            <g fill="none" stroke="#C9A98A" stroke-width="1.2" opacity=".9">
+              <path d="M42 152 q42 -36 88 -17 q48 19 96 -13"/>
+              <path d="M50 170 q46 -32 92 -15 q44 17 88 -11"/>
+              <path d="M66 104 q30 -23 64 -6"/>
+              <path d="M74 88 q26 -18 54 -4"/>
+            </g>
+
+            <!-- 道路 -->
+            <path d="M34 122 L122 98 L190 114" fill="none" stroke="#8D9CA8" stroke-width="2.6"/>
+            <path d="M84 30 L96 84" fill="none" stroke="#8D9CA8" stroke-width="1.4"
+                  stroke-dasharray="5 4"/>
+
+            <!-- 紫色赛程线 -->
+            <g fill="none" stroke="#9C85C5" stroke-width="2.2">
+              <path d="M62 76 L122 94 L154 66 L200 98 L162 150"/>
+            </g>
+            <g fill="#FFFFFF" stroke="#9C85C5" stroke-width="2.2">
+              <circle cx="122" cy="94" r="6.2"/>
+              <circle cx="154" cy="66" r="6.2"/>
+              <circle cx="200" cy="98" r="6.2"/>
+            </g>
+            <!-- 起点三角 -->
+            <path d="M62 68 L68 80 L56 80 Z" fill="#9C85C5"/>
+            <!-- 终点双圈 -->
+            <circle cx="162" cy="150" r="6" fill="#fff" stroke="#9C85C5" stroke-width="2.2"/>
+            <circle cx="162" cy="150" r="9.5" fill="none" stroke="#9C85C5" stroke-width="1.6"/>
+          </g>
+
+          <!-- 指北针 -->
+          <g transform="translate(244,152)">
+            <circle r="27" fill="#FFFFFF" stroke="#B6D5EC" stroke-width="3"/>
+            <circle r="20.5" fill="none" stroke="#D6E1EA" stroke-width="1.4"/>
+            <path d="M0 -18 L7.2 0 L-7.2 0 Z" fill="#D9776F"/>
+            <path d="M0 18 L-7.2 0 L7.2 0 Z" fill="#CFDCE6"/>
+            <circle r="3.4" fill="#5B6D7B"/>
+            <path d="M0 -27 L0 -22" stroke="#9C85C5" stroke-width="2" stroke-linecap="round"/>
+          </g>
+
+          <!-- 橙白点标旗 -->
+          <g transform="translate(30,150)">
+            <path d="M3 4 L3 42" stroke="#8D9CA8" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M3 5 L42 5 L42 34 Z" fill="#F0A868"/>
+            <path d="M3 5 L42 34 L3 34 Z" fill="#FFFFFF"/>
+            <rect x="2" y="4" width="41" height="31" fill="none" stroke="#C9D6E0" stroke-width="1.6"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== 怎么玩 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">怎么玩</div>
+    <div class="card card--plain prose">
+      <p>出发时你只有三样东西：<strong>一张地图、一个指北针、一个指卡</strong>。地图上用紫色标出了起点、若干个打卡点和终点，还画上了等高线、水体、林地、道路、建筑这些地形信息。运动员需要自己在图上规划一条路线，跑到每一个点打卡，顺序不能错。</p>
+      <p>难点从来不是「找到路」，而是<strong>在好几条看起来都行的路线里挑出最快的那条</strong>。直线距离最短的路，可能是要爬升的一大片陡坡；绕远一点的大路，反而更省时间。判断错耽误了两分钟，就可能与心心念念的冠军失之交臂。</p>
+      <p>我很喜欢它这一点：<strong>决策力和体能</strong>都是必须的，只跑得快不够，只读图准也不行。</p>
+    </div>
+  </section>
+
+  <!-- ===== 装备与考验 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">装备与考验</div>
+    <dl class="factgrid" style="margin:0">
+      <div class="fact">
+        <dt>随身装备</dt>
+        <dd>定向地图、指北针、指卡（电子打卡器），很野的场地还要带上护腿</dd>
+      </div>
+      <div class="fact">
+        <dt>考验的能力</dt>
+        <dd>识图能力 · 细心程度 · 野外穿越的勇气与能力 · 长跑体能</dd>
+      </div>
+      <div class="fact">
+        <dt>规则要点</dt>
+        <dd>必须按顺序打卡，漏点、错序或超时即成绩无效</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ===== 图例 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">
+      地图图例
+      <span class="hint">运动员要熟记常见图例，才能快速找到标志物并找到打卡点</span>
+    </div>
+    <div class="legend">
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><g fill="none" stroke="#C9A98A" stroke-width="1.7">
+          <path d="M4 20 q6 -9 11 -4 q4 4 11 -2"/><path d="M4 25 q7 -8 12 -3 q4 4 10 -2"/>
+        </g></svg></i>等高线 · 山形
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M4 11 q5 -4 11 0 q6 4 11 0 v10 q-5 4 -11 0 q-6 -4 -11 0 z"
+          fill="#B6D5EC"/></svg></i>水体
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M5 16 q7 -9 14 -4 q8 5 6 11 q-2 6 -12 5 q-11 -1 -8 -12 z"
+          fill="#008000"/></svg></i>密林·极难通行
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M5 16 q7 -9 14 -4 q8 5 6 11 q-2 6 -12 5 q-11 -1 -8 -12 z"
+          fill="#90EE90"/></svg></i>林地·可缓慢通行
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M5 16 q7 -9 14 -4 q8 5 6 11 q-2 6 -12 5 q-11 -1 -8 -12 z"
+          fill="#F8F8FF"/></svg></i>白林·可奔跑
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M4 20 q7 -7 14 -3 q6 3 8 -2"
+          fill="none" stroke="#D9C79E" stroke-width="6" stroke-linecap="round"/></svg></i>开阔地
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M4 24 L26 7" stroke="#5B6D7B" stroke-width="3.2"
+          stroke-linecap="round"/></svg></i>主要道路
+      </span>
+
+      <span class="legend__item">
+  <i>
+    <svg viewBox="0 0 30 30">
+      <path d="M3 15 L27 15" fill="none" stroke="#000"
+            stroke-width="3" stroke-linecap="butt"/>
+      <g fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="butt">
+        <line x1="6"  y1="16.5" x2="6"  y2="22"/>
+        <line x1="10" y1="16.5" x2="10" y2="22"/>
+        <line x1="14" y1="16.5" x2="14" y2="22"/>
+        <line x1="18" y1="16.5" x2="18" y2="22"/>
+        <line x1="22" y1="16.5" x2="22" y2="22"/>
+        <line x1="26" y1="16.5" x2="26" y2="22"/>
+      </g>
+    </svg>
+  </i>悬崖 / 岩壁
+</span>
+
+
+
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M4 24 L26 7" stroke="#8D9CA8" stroke-width="1.8"
+          stroke-dasharray="4 3" stroke-linecap="round"/></svg></i>小径
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M7 13 L24 13 L24 23 L7 23 Z" fill="#5B6D7B"/></svg></i>
+        建筑物
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><rect x="5" y="6" width="20" height="18" fill="#C9CF9A"/>
+          <g stroke="#8A2BE2" stroke-width="1.6"><path d="M9 24 L20 6"/><path d="M15 24 L26 6"/></g></svg></i>
+        禁区 · 不可进入
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="8" fill="#fff"
+          stroke="#9C85C5" stroke-width="2.4"/></svg></i>打卡点
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><path d="M15 6 L23 22 L7 22 Z" fill="#9C85C5"/></svg></i>起点
+      </span>
+
+      <span class="legend__item">
+        <i><svg viewBox="0 0 30 30"><circle cx="15" cy="15" r="6" fill="#fff"
+          stroke="#9C85C5" stroke-width="2.4"/><circle cx="15" cy="15" r="9.5" fill="none"
+          stroke="#9C85C5" stroke-width="1.6"/></svg></i>终点
+      </span>
+
+    </div>
+    <p class="sec-lead" style="margin-top:16px">
+      真正拿在手上的地图比这复杂得多——小到一棵独立的树、一个巨石、一条水沟，都会被标出来。
+      读图这件事，练的就是<strong>把纸上的符号和眼前的地形对上</strong>。
+    </p>
+  </section>
+
+  <!-- ===== 图集 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">
+      场地图集
+      <span class="hint">点击图片可放大</span>
+    </div>
+
+    <div class="group">
+      <div class="gallery-head">
+      </div>
+      <div class="masonry masonry--two">
+        <figure>
+          <img src="assets/img/sport/orient-finish-control.jpg" data-zoom="assets/img/sport/orient-finish-control.jpg"
+               alt="平铺的定向地图上放着指北针" data-cap="不好好对北下一秒就晕啦(ﾉ*･ω･)ﾉ">
+          <figcaption><b>对北</b> · 指北针的红针指向图上正北，地图才算摆正了(｡•̀ᴗ-)✧</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-map-compass-gloves.jpg" data-zoom="assets/img/sport/orient-map-compass-gloves.jpg"
+               alt="戴着手套的运动员低头看地图与指北针" data-cap="还很菜的时候要停下来反复确认自己到底在哪𖦹ࡇ𖦹 .ᐟ.ᐟ">
+          <figcaption><b>跑动过程中转图</b> · 时时刻刻明确自己的位置(●'◡'●)ﾉ</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-reading-map.jpg" data-zoom="assets/img/sport/orient-reading-map.jpg"
+               alt="草坡上边跑边看图的运动员" data-cap="荒草地&我们૮₍ ˊᗜˋ₎ა">
+          <figcaption><b>越野！</b> · 没想到真实的野外是这样的>_< </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-map-compass-jnu.jpg" data-zoom="assets/img/sport/orient-map-compass-jnu.jpg"
+               alt="运动员在野地里手持地图核对位置" data-cap="真的跑不动了 躺下来休息一下*_*">
+          <figcaption><b>超长距离</b> · 限时4h的阳宗海我忘不了你• ︡ᯅ•︠</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-mud-mass-start.jpg" data-zoom="assets/img/sport/orient-mud-mass-start.jpg"
+               alt="雨后泥地里集体出发的运动员" data-cap="下面视频里还有更吓人的泥鞋子哦^.^">
+          <figcaption><b>泥泞的田埂</b> · 比赛后最累的是帮忙洗鞋子的妈妈们៷>ᴗ<៷</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-night-finish-gate.jpg" data-zoom="assets/img/sport/orient-night-finish-gate.jpg"
+               alt="夜间定向赛的红色终点拱门与冲线的人群" data-cap="太壮观啦^_^">
+          <figcaption><b>夜间定向</b> · 几百盏头灯一起冲出来(ง •̀_•́)ง</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-wild-run.jpg" data-zoom="assets/img/sport/orient-wild-run.jpg"
+               alt="运动员穿越长满枯草与灌木的荒坡" data-cap="其实很享受雨中奔跑~ ๑>◡<๑">
+          <figcaption><b>暴雨</b> · 只要不打雷不刮台风 比赛就继续进行˶･֊･˶</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/sport/orient-2018-finish.jpg" data-zoom="assets/img/sport/orient-2018-finish.jpg"
+               alt="林间的 FINISH 终点横幅、点标旗与国旗" data-cap="累亖了…•̩̩̩̩ᯅ•̩̩̩̩">
+          <figcaption><b>终点</b> · 终于到终点了……〒_〒</figcaption>
+        </figure>
+        <figure>
+        <img src="assets/img/ardf2/ardf-thorns.jpg" data-zoom="assets/img/ardf2/ardf-thorns.jpg"
+             alt="跑完一圈后裤腿上扎满了草刺" data-cap="辛苦洗衣服的妈啦~">
+        <figcaption><b>成刺猬了</b> · 一腿的鬼针草'◡'</figcaption>
+      </figure>
+      </div>
+    </div>
+
+    <!-- ===== 赛场视频 ===== -->
+    <div class="group">
+      <div class="gallery-head">
+        <h3>2026 年全国青少年定向锦标赛</h3>
+        <p>赛场实况：出发、找点、冲线</p>
+      </div>
+      <figure class="videobox" style="margin:0">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/orienteering-2026-national.mp4" type="video/mp4">
+          你的浏览器不支持视频播放。可以
+          <a href="assets/video/orienteering-2026-national.mp4">点击这里下载视频文件</a>。
+        </video>
+        <figcaption>
+          2026 年全国青少年定向锦标赛 · 赛场赛况。hhhhh别被视频吓到了，一般定向比赛的野外没有那么可怕~
+        </figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+  <section class="blk wrap">
+    <div class="eyebrow">和无线电测向的关系</div>
+    <div class="callout">
+      <p>这两项运动经常被放在一起练，甚至在同一场比赛里连着比。区别在于：<b>定向越野是「照着地图找点」，无线电测向是「靠无线电信号找电台」。</b>前者考读图，后者考辨向，但都要在野地里奔跑很长的距离。</p>
+      <p style="margin-top:12px">所以从三年级练下来，跑野外反而变成了最喜欢也最常练的部分。另一项兴趣的详细介绍在 <a href="interest-ardf.html">无线电测向</a> 页。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>周乐曈 · 人工智能学院 2026 级</p>
+    <p><a href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a></p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lightbox" aria-label="放大的图片">
+  <button class="lb__x" type="button" aria-label="关闭">✕</button>
+  <div class="lb__inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>定向轨迹回放视频 · 作品 01 · 周乐曈</title>
+<meta name="description" content="用运动手表记录 GPS 轨迹，导入 Control Orienteering Analysis 叠加赛事地图，导出可回放的路线视频，用来复盘每一段路线选择。">
+<link rel="stylesheet" href="style.css">
+<style>
+  .split { display: grid; grid-template-columns: 1.25fr .95fr; gap: 22px; align-items: start; }
+  .split .masonry { column-count: 2; }
+  @media (max-width: 940px) { .split { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc-soft" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="3" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">曈</span>
+      <span class="brand__text">周乐曈<em>Zhou Letong</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#about">简介</a>
+      <a href="index.html#interests">兴趣</a>
+      <a href="index.html#honor">荣誉</a>
+      <a href="index.html#works" aria-current="page">作品</a>
+      <a href="index.html#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap detail-hero">
+    <a class="backlink" href="index.html#works">← 返回首页 · 作品展示</a>
+    <div class="detail-hero__grid" style="grid-template-columns:1.6fr .8fr">
+      <div>
+        <p class="workcard__no" style="font-size:12px">作品 01</p>
+        <h1>定向轨迹回放视频</h1>
+        <p class="lead">
+          每次训练和比赛，我都会戴运动手表记录 GPS 轨迹。回家之后把<strong>轨迹</strong>和<strong>赛事地图</strong>一起导入
+          <em>Control Orienteering Analysis</em>，就能导出一段「地图上有一颗小点沿着我的实际路线移动」的回放视频。
+          哪一步绕了远路、哪个点找慢了，对着看一遍非常直观。
+        </p>
+        <div class="chips" style="margin-top:22px">
+          <span class="chip">运动手表 GPS</span>
+          <span class="chip chip--purple">Control Orienteering Analysis</span>
+          <span class="chip chip--sage">轨迹可视化</span>
+          <span class="chip chip--pink">赛后复盘</span>
+        </div>
+      </div>
+      <figure class="doodle" style="margin:0">
+        <svg viewBox="0 0 200 200" style="width:100%;max-width:230px;margin:0 auto" role="img"
+             aria-label="地图上移动的轨迹小点示意">
+          <ellipse cx="100" cy="178" rx="72" ry="13" fill="#B6D5EC" opacity=".45" filter="url(#wc-soft)"/>
+          <rect x="22" y="24" width="156" height="140" rx="8" fill="#FDFAF4" stroke="#D6E1EA" stroke-width="2"/>
+          <g fill="none" stroke="#C9A98A" stroke-width="1.2" opacity=".85">
+            <path d="M34 132 q34 -30 70 -14 q38 17 62 -12"/>
+            <path d="M42 148 q36 -26 72 -12 q34 13 54 -9"/>
+          </g>
+          <path d="M60 120 q40 -8 62 -44 q16 -26 24 4" fill="none" stroke="#9C85C5"
+                stroke-width="6" stroke-linecap="round" opacity=".28"/>
+          <path d="M60 120 q40 -8 62 -44 q16 -26 24 4" fill="none" stroke="#9C85C5"
+                stroke-width="2.4" stroke-linecap="round"/>
+          <g fill="#FFFFFF" stroke="#9C85C5" stroke-width="2">
+            <circle cx="60" cy="120" r="5.4"/><circle cx="122" cy="76" r="5.4"/>
+          </g>
+          <path d="M60 114 L65 124 L55 124 Z" fill="#9C85C5"/>
+          <circle cx="146" cy="80" r="9" fill="none" stroke="#9C85C5" stroke-width="1.4" opacity=".5"/>
+          <circle cx="146" cy="80" r="16" fill="none" stroke="#9C85C5" stroke-width="1.2" opacity=".3"/>
+          <circle cx="146" cy="80" r="7" fill="#E4796F" stroke="#FFFFFF" stroke-width="2"/>
+        </svg>
+        <figcaption>那颗跟着路线走的小点，就是我</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== 视频 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">
+      回放视频
+      <span class="hint">点击播放</span>
+    </div>
+    <figure class="videobox" style="margin:0">
+      <video controls preload="metadata" playsinline
+             poster="assets/img/track/track-map-3_5mhz.jpg">
+        <source src="assets/video/track-replay.mp4" type="video/mp4">
+        你的浏览器不支持视频播放。可以
+        <a href="assets/video/track-replay.mp4">点击这里下载视频文件</a>。
+      </video>
+      <figcaption>
+        轨迹回放 · 地图上移动的小点记录了整场比赛的路线选择。视频里可以看到我是怎么从起点出发、
+        依次找点，以及中途在哪一段犹豫过。
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ===== 视频号链接 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">完整比赛案例</div>
+    <div class="linkbar">
+      <p>
+        <b>广东省第十七届运动会定向比赛运动员轨迹视频</b>
+        ——点击链接可跳转微信视频号观看（手机微信里点开即可播放）。
+      </p>
+      <a class="btn" href="https://weixin.qq.com/sph/AsnztlGP6C" target="_blank" rel="noopener noreferrer">
+        观看完整轨迹视频 →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 制作流程 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">制作流程</div>
+    <div class="split">
+      <ol class="steps">
+        <li>
+          <h4>赛前：戴好手表</h4>
+          <p>运动手表开启越野跑模式，确保 GPS 采样频率拉到最高。比赛全程不停表，起终点的时间要卡准。</p>
+        </li>
+        <li>
+          <h4>赛后：导出轨迹</h4>
+          <p>把 GPX / FIT 轨迹文件从手表同步到手机或电脑，顺手看一眼总距离、爬升和每公里配速，先有个大概印象。</p>
+        </li>
+        <li>
+          <h4>导入地图</h4>
+          <p>在 Control Orienteering Analysis 里载入这场比赛对应的定向地图。地图和轨迹是两套坐标系，要先做配准，让它们严丝合缝地叠在一起。</p>
+        </li>
+        <li>
+          <h4>叠加与校准</h4>
+          <p>把轨迹贴到地图上，逐段检查有没有整体偏移。GPS 在林下、山谷里容易飘，偏移明显的地方需要手动校一下。</p>
+        </li>
+        <li>
+          <h4>导出回放视频</h4>
+          <p>设置好播放速度和镜头范围，导出成视频。可以做成全程一镜到底，也可以针对某几个关键点单独慢放。</p>
+        </li>
+        <li>
+          <h4>最终复盘</h4>
+          <p>在队里，大家会拿出自己的轨迹图或轨迹视频分享，互相比较哪里可以跑得更快、各自的失误在哪。</p>
+        </li>
+      </ol>
+
+      <div>
+        <div class="masonry">
+          <figure>
+            <img src="assets/img/track/track-map-3_5mhz.jpg" data-zoom="assets/img/track/track-map-3_5mhz.jpg"
+                 alt="无线电测向 A 3.5MHz 标准距离赛区地图" data-cap="A 3.5MHz 标准距离 · 赛区地图">
+            <figcaption><b>省运会比赛地图</b> · 一场3.5MHz标准距离比赛的正式地图以及我跑的轨迹</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/track/track-watch-screen.jpg" data-zoom="assets/img/track/track-watch-screen.jpg"
+                 alt="手机上的训练记录与轨迹" data-cap="训练后同步回来的记录">
+            <figcaption><b>手表同步</b> · 训练结束后同步回来的记录，轨迹、距离、爬升量一目了然</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 为什么要做这个 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">为什么值得做</div>
+    <div class="card card--plain prose">
+      <p>定向和测向这两项运动有个很麻烦的地方：<strong>成绩单只会告诉你慢了，但不会告诉你慢在哪</strong>。它给你一个总用时和一个名次，中间发生了什么全靠自己回忆——而人的回忆很不靠谱，跑完之后通常只记得「某个点好像找了很久」。</p>
+      <p>轨迹回放把这段记忆变成了可以反复看的东西。我第一次做完就发现，自己以为跑得最顺的那一段，其实是绕了一个大弯；而一直觉得「找得很辛苦」的点，用时反而在平均水平。这种<strong>感觉和事实的偏差</strong>，正是轨迹回放最有意思的地方。</p>
+      <p>后来我也开始把这个习惯用到别的地方：跑步、日常训练，甚至一些需要复盘的学习任务。本质上就是一件事——<em>把过程留下来，然后诚实地看它</em>。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>周乐曈 · 人工智能学院 2026 级</p>
+    <p><a href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a></p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lightbox" aria-label="放大的图片">
+  <button class="lb__x" type="button" aria-label="关闭">✕</button>
+  <div class="lb__inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>摄影 · 周乐曈</title>
+<meta name="description" content="摄影：偏爱单反与微单的手动挡，自己调 ISO 与快门，控制画面的明暗和色调氛围，并在学习后期调色。">
+<link rel="stylesheet" href="style.css">
+<style>
+  .gear { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gear .fact { display: flex; flex-direction: column; }
+  .gear svg { width: 54px; height: 54px; margin-bottom: 12px; color: var(--blue-500); }
+  .gear h4 { font-size: 15px; margin-bottom: 6px; }
+  .gear p { font-size: 13px; color: var(--ink-2); }
+  .swatches { display: flex; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-2); }
+  .swatches span { flex: 1; height: 46px; }
+  .swatches span:nth-child(1){ background:#6DA2CB; }
+  .swatches span:nth-child(2){ background:#92BBDE; }
+  .swatches span:nth-child(3){ background:#CBB8E4; }
+  .swatches span:nth-child(4){ background:#F0BFCE; }
+  .swatches span:nth-child(5){ background:#F5D6A8; }
+  .swatches span:nth-child(6){ background:#C6DDC1; }
+  @media (max-width: 940px) { .gear { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 680px) { .gear { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wc-soft" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="3" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CBB8E4"/>
+      <stop offset="52%" stop-color="#F0BFCE"/>
+      <stop offset="100%" stop-color="#F7DFAE"/>
+    </linearGradient>
+    <clipPath id="landClip"><rect x="92" y="26" width="168" height="116" rx="3"/></clipPath>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">曈</span>
+      <span class="brand__text">周乐曈<em>Zhou Letong</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#about">简介</a>
+      <a href="index.html#interests">兴趣</a>
+      <a href="index.html#honor">荣誉</a>
+      <a href="index.html#works">作品</a>
+      <a href="index.html#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap detail-hero">
+    <a class="backlink" href="index.html#interests">← 返回首页 · 兴趣标签</a>
+    <div class="detail-hero__grid">
+      <div>
+        <h1>摄影</h1>
+        <p class="lead">
+          偏爱使用<strong>单反和微单的手动挡</strong>，享受在按快门前就把 ISO、光圈和快门定好，用它们来控制画面亮暗和色调氛围。
+          同时也在学习照片的后期处理、自己调色等技术。
+        </p>
+        <div class="chips" style="margin-top:22px">
+          <span class="chip chip--pink">单反 / 微单</span>
+          <span class="chip">手动挡 M 档</span>
+          <span class="chip chip--purple">后期调色学习中</span>
+        </div>
+      </div>
+
+      <!-- 相机 + 风景照 水彩涂鸦 -->
+      <figure class="doodle" style="margin:0">
+        <svg viewBox="0 0 320 212" style="width:100%;max-width:400px;margin:0 auto" role="img"
+             aria-label="相机与风景照的水彩涂鸦">
+          <ellipse cx="180" cy="186" rx="120" ry="18" fill="#CBB8E4" opacity=".38" filter="url(#wc-soft)"/>
+
+          <!-- 风景照底片框 -->
+          <g transform="rotate(-5 176 84)">
+            <rect x="86" y="20" width="180" height="128" rx="5"
+                  fill="#FFFFFF" stroke="#D6E1EA" stroke-width="2"/>
+            <g clip-path="url(#landClip)">
+              <rect x="92" y="26" width="168" height="116" fill="url(#dusk)"/>
+              <circle cx="212" cy="62" r="17" fill="#FFF3DA" opacity=".95"/>
+              <path d="M92 96 L120 66 L146 96 Z" fill="#9C85C5" opacity=".55" filter="url(#wc)"/>
+              <path d="M132 100 L166 62 L204 100 Z" fill="#8FA9C8" opacity=".6" filter="url(#wc)"/>
+              <rect x="92" y="104" width="168" height="38" fill="#8FB9DC" opacity=".72"/>
+              <g stroke="#FFFFFF" stroke-width="2" opacity=".65" stroke-linecap="round">
+                <path d="M108 116 L136 116"/><path d="M152 124 L188 124"/><path d="M200 114 L236 114"/>
+              </g>
+              <g stroke="#5B6D7B" stroke-width="1.6" fill="none" opacity=".55" stroke-linecap="round">
+                <path d="M136 44 q5 -5 10 0 q5 -5 10 0"/>
+                <path d="M160 56 q4 -4 8 0 q4 -4 8 0"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- 相机 -->
+          <g transform="translate(24,124)">
+            <path d="M34 14 L40 2 L74 2 L80 14" fill="#FFFFFF" stroke="#8FB9DC"
+                  stroke-width="3" stroke-linejoin="round"/>
+            <rect x="0" y="13" width="120" height="64" rx="11" fill="#FFFFFF"
+                  stroke="#8FB9DC" stroke-width="3"/>
+            <circle cx="59" cy="45" r="23" fill="#E7F1FA" stroke="#8FB9DC" stroke-width="3"/>
+            <circle cx="59" cy="45" r="14" fill="#FFFFFF" stroke="#B6D5EC" stroke-width="2.4"/>
+            <circle cx="59" cy="45" r="6" fill="#8FB9DC"/>
+            <circle cx="101" cy="26" r="5.5" fill="none" stroke="#B6D5EC" stroke-width="2.4"/>
+            <circle cx="18" cy="11" r="5" fill="#CBB8E4"/>
+            <rect x="86" y="2" width="18" height="11" rx="3" fill="#E7F1FA" stroke="#B6D5EC" stroke-width="2"/>
+          </g>
+        </svg>
+        <figcaption>一台会陪我走很久的相机</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== 为什么是手动挡 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">为什么坚持手动挡</div>
+    <div class="card card--plain prose">
+      <p>自动挡很好用，但它替我做的决定，往往不是我想要的那个。日落的最后十分钟，天光每半分钟就换一次颜色，而自动测光会努力把整个画面拉回「平均亮度」，橙红色的晚霞就会被压成灰扑扑的中间调，完全没法显示出它最原始的样子。换成手动挡，我可以<strong>故意让它暗一点</strong>，把画面的重心放在天空上。</p>
+      <p>我会先看现场光有多亮，把 ISO 定在尽可能低的档位，再用光圈和快门去配想要的明暗与景深：</p>
+    </div>
+
+    <div class="gear" style="margin-top:18px">
+
+      <div class="fact">
+        <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="30" cy="30" r="25" stroke-width="2.4"/>
+          <path d="M41 30 L35.5 39.5 L24.5 39.5 L19 30 L24.5 20.5 L35.5 20.5 Z"
+                stroke-width="2.4" fill="#E7F1FA"/>
+          <g stroke-width="1.8" opacity=".8" stroke-linecap="round">
+            <path d="M41 30 L55 30"/><path d="M35.5 39.5 L43 52"/>
+            <path d="M24.5 39.5 L17 52"/><path d="M19 30 L5 30"/>
+            <path d="M24.5 20.5 L17 8"/><path d="M35.5 20.5 L43 8"/>
+          </g>
+        </svg>
+        <h4>光圈</h4>
+        <p>决定进光量和景深。想让背景化成一片柔光，就开大；想让整条长城从近到远都清楚，就收小。</p>
+      </div>
+
+      <div class="fact">
+        <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="30" cy="30" r="25" stroke-width="2.4"/>
+          <path d="M30 30 L30 5 A25 25 0 0 1 51.7 42.5 Z" fill="#E7F1FA" stroke-width="2.4"/>
+          <circle cx="30" cy="30" r="3.4" fill="currentColor" stroke="none"/>
+          <path d="M14 33 L46 17" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <h4>快门速度</h4>
+        <p>决定「凝固」还是「流动」。拍奔跑的人用高的，拍海浪拉丝和烟花拖尾用低的，低到一秒以上还得架稳。</p>
+      </div>
+
+      <div class="fact">
+        <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" aria-hidden="true">
+          <rect x="6" y="22" width="48" height="26" rx="7" stroke-width="2.4"/>
+          <g stroke-width="3.4" stroke-linecap="round">
+            <path d="M16 41 L16 34"/><path d="M24 41 L24 29"/>
+            <path d="M32 41 L32 24"/><path d="M40 41 L40 29"/><path d="M48 41 L48 34"/>
+          </g>
+          <path d="M20 14 L40 14" stroke-width="2.4" stroke-linecap="round" opacity=".6"/>
+          <path d="M30 14 L30 20" stroke-width="2.4" stroke-linecap="round" opacity=".6"/>
+        </svg>
+        <h4>ISO</h4>
+        <p>决定感光敏感度。<strong>它是我拍照前就会定好的一项</strong>：白天光线足，先把它调到最低，噪点少画质最干净；到了傍晚或者室内，再往上抬一档换亮度。定完 ISO 再配光圈和快门，调出想要的亮度和氛围。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 拍摄习惯 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">我的拍摄习惯</div>
+    <div class="card card--plain prose">
+      <p><strong>一、会为了光等很久 </strong>出门拍照前我会先看当天的日落时间和云量，然后提前四十分钟到地方。拍日落这件事，真正好看的可能只有十几分钟，剩下三十分钟都在等——但我并不觉得枯燥，因为天光是一直在变的，每几分钟都是另一张照片。</p>
+      <p><strong>二、拍建筑喜欢找「框」 </strong>松枝、树叶、屋檐、门缝，只要能形成一层前景的遮挡，我都会凑过去试试。好处是画面会有纵深，观众的眼睛会被自然地引到主体上。我拍到比较满意的几张故宫和角楼，都是用这个办法拍的。</p>
+      <p><strong>三、喜欢影子比喜欢实体多一点 </strong>逆光里的山脊、滩涂上的人影、雪地上拉长的树影——这些都是实实在在的形状，但又不是对象本身。它们只在那一个时刻存在，过了就没了，所以我拍得格外上心。</p>
+      <p><strong>四、出门会同时带单反和微单 </strong>单反挂长焦负责认真拍，微单用定焦随手记录。旅游的时候两台的重量其实挺劝退的，但每次回来看照片，都会庆幸自己都带上了。</p>
+    </div>
+  </section>
+
+  <!-- ===== 后期 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">后期调色 · 正在学</div>
+    <div class="card card--tint">
+      <p class="sec-lead" style="max-width:70ch">
+        前期决定画面里有什么，后期决定它<strong>是什么基调</strong>。我目前会做的还比较基础：先把高光压回去、把阴影提起来，
+        让细节别死在一头，再单独调整某个颜色的色相和明度，比如把傍晚的海面往青蓝偏一点；
+        最后统一加一层很淡的色调，让整组照片看起来像是同一天拍的。
+      </p>
+
+      <p style="margin:24px 0 10px;font-size:13px;color:var(--ink-3);letter-spacing:.1em">
+        我现在常用的色调区间
+      </p>
+      <div class="swatches" role="img" aria-label="常用的色调区间：从青蓝到浅绿">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="chips" style="margin-top:14px">
+        <span class="chip">冷调 · 青蓝</span>
+        <span class="chip chip--purple">雾霾紫</span>
+        <span class="chip chip--pink">夕照粉</span>
+        <span class="chip chip--plain">暖黄 · 暮金</span>
+        <span class="chip chip--sage">清透绿</span>
+      </div>
+
+      <p class="sec-lead" style="margin-top:22px">
+        还很新手，属于「会调一点但说不清原理 纯凭感觉」的阶段。接下来想学习的是色彩理论和曲线，
+        以及怎么让一组照片的色调真正统一起来。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 图片 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">
+      挑几张看看
+      <span class="hint">横向滑动 · 点击可放大</span>
+    </div>
+    <div class="filmstrip">
+      <figure>
+        <img src="assets/img/photo/photo-01.jpg" data-zoom="assets/img/photo/photo-01.jpg"
+             alt="松枝后的故宫殿脊" data-cap="松枝后的殿脊 · 北京">
+        <figcaption>松枝后的殿脊 · 北京</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/photo/photo-05.jpg" data-zoom="assets/img/photo/photo-05.jpg"
+             alt="雪后夕阳下的屋脊与飞鸟" data-cap="雪后夕阳与飞鸟">
+        <figcaption>雪后夕阳与飞鸟</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/photo/photo-09.jpg" data-zoom="assets/img/photo/photo-09.jpg"
+             alt="海浪拍打礁石，远处有灯塔" data-cap="海浪与灯塔">
+        <figcaption>海浪与灯塔</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/photo/photo-12.jpg" data-zoom="assets/img/photo/photo-12.jpg"
+             alt="城堡上空的红色烟花" data-cap="城堡烟花">
+        <figcaption>城堡烟花</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/photo/photo-14.jpg" data-zoom="assets/img/photo/photo-14.jpg"
+             alt="暮色滩涂上的人影" data-cap="暮色滩涂上的人影">
+        <figcaption>暮色滩涂上的人影</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/photo/photo-17.jpg" data-zoom="assets/img/photo/photo-17.jpg"
+             alt="群山中的长城" data-cap="群山中的长城">
+        <figcaption>群山中的长城</figcaption>
+      </figure>
+    </div>
+
+    <div class="linkbar" style="margin-top:12px">
+      <p><b>完整的 19 张作品</b>按建筑、天象、自然、城市夜景与长城五组整理在作品集里。</p>
+      <a class="btn btn--ghost" href="work-photography.html">进入摄影作品集 →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>周乐曈 · 人工智能学院 2026 级</p>
+    <p><a href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a></p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lightbox" aria-label="放大的图片">
+  <button class="lb__x" type="button" aria-label="关闭">✕</button>
+  <div class="lb__inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

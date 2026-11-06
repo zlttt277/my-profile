@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>无线电测向 · 周乐曈</title>
+<meta name="description" content="无线电测向：一场在山林里进行的大型寻宝游戏。装备、规则、考验的能力，以及我拍下的赛场瞬间。">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* 图集：不分组，用疏密不均的廊柱排布避免「格子感」 */
+  .gallery-mixed { column-count: 3; column-gap: 18px; }
+  .gallery-mixed figure:nth-child(4n) { margin-bottom: 26px; }
+  .gallery-mixed figcaption { font-size: 12.5px; }
+  @media (max-width: 940px) { .gallery-mixed { column-count: 2; } }
+  @media (max-width: 680px) { .gallery-mixed { column-count: 1; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <linearGradient id="skyBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B6D5EC"/><stop offset="1" stop-color="#CBB8E4"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">曈</span>
+      <span class="brand__text">周乐曈<em>Zhou Letong</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#about">简介</a>
+      <a href="index.html#interests">兴趣</a>
+      <a href="index.html#honor">荣誉</a>
+      <a href="index.html#works">作品</a>
+      <a href="index.html#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== 详情页头 ===== -->
+  <div class="wrap detail-hero">
+    <a class="backlink" href="index.html#interests">← 返回首页 · 兴趣标签</a>
+    <div class="detail-hero__grid">
+      <div>
+        <h1>无线电测向</h1>
+        <p class="lead">
+          一场在山林里进行的大型寻宝游戏。配备地图、测向机、指北针，在山林间穿梭，
+          通过耳机里听到的电波信号判断方向、寻找电台。它考验运动员的<strong>反应力、
+          短时决策判断能力、体能和毅力</strong>。
+        </p>
+        <div class="chips" style="margin-top:22px">
+          <span class="chip">3.5MHz 短距离</span>
+          <span class="chip">144MHz 标准距离</span>
+          <span class="chip chip--purple">国家运动健将</span>
+        </div>
+      </div>
+
+      <!-- 手持 144MHz 测向机跑步的小人剪影 -->
+      <figure class="doodle doodle--figure" style="margin:0">
+        <svg viewBox="0 0 260 170" style="width:100%;max-width:340px;margin:0 auto" role="img"
+             aria-label="手持测向机奔跑的人影">
+          <!-- 水彩底色 -->
+          <ellipse cx="130" cy="142" rx="104" ry="18" fill="#D3E6F5" opacity=".75" filter="url(#wc-soft)"/>
+          <ellipse cx="178" cy="130" rx="60" ry="12" fill="#E2D7F1" opacity=".6" filter="url(#wc-soft)"/>
+
+          <!-- 身体：简洁的跑步剪影 -->
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="92" cy="46" r="11.5" fill="currentColor" stroke="none"/>
+            <path d="M92 58 L96 96" stroke-width="17"/>
+            <path d="M96 68 L122 60" stroke-width="10"/>
+            <path d="M94 70 L70 82" stroke-width="10"/>
+            <path d="M96 96 L118 122 L112 148" stroke-width="13"/>
+            <path d="M96 96 L72 120 L48 130" stroke-width="13"/>
+          </g>
+
+          <!-- 手持 144MHz 测向机（三单元八木天线） -->
+          <g fill="none" stroke="currentColor" stroke-linecap="round">
+            <path d="M126 62 L212 34" stroke-width="5"/>
+            <g stroke-width="3.2">
+              <path d="M136 54.6 L145 82.4"/>
+              <path d="M164 45.9 L173 73.7"/>
+              <path d="M192 37.3 L201 65.1"/>
+            </g>
+          </g>
+
+          <!-- 耳机线 -->
+          <path d="M96 56 Q104 70 96 84" fill="none" stroke="currentColor"
+                stroke-width="2.4" stroke-linecap="round" opacity=".85"/>
+        </svg>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== 规则 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">怎么玩</div>
+    <div class="card card--plain prose">
+      <p>出发前你会拿到一张比赛场地的地图，自己准备一个指北针和一台测向机。场地上埋伏着若干台隐藏的<em>电台</em>，它们每隔一段时间就会发出一段特定的摩斯电码。运动员戴着耳机在山林里跑动，靠<strong>信号强弱和方向的变化</strong>判断电台藏在哪，找到它、打卡，然后奔向下一个电台。</p>
+      <p>难的地方在于：电波信号会被山体、水面、楼房、金属网等反射，听到的「最响的方向」往往不是真实方向。所以跑测向不能只靠耳朵，还得靠运动员<strong>在跑动中不断修正判断并迅速调整</strong>——这才是最考验运动员的地方。</p>
+      <p>一场标准距离的比赛，跑动距离通常在 6–10 公里之间，全程在林地里穿梭，等于是把<strong>定向越野和无线电测向</strong>放在了一起。</p>
+    </div>
+  </section>
+
+  <!-- ===== 装备与能力 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">电台发出的信号怎么响</div>
+    <dl class="factgrid" style="margin:0">
+      <div class="fact">
+        <dd><strong>0号：</strong> -----</dd>
+        <dd><strong>1号：</strong> -- --- ·</dd>
+        <dd><strong>2号：</strong> -- --- ··</dd>
+        <dd><strong>3号：</strong> -- --- ···</dd>
+        <dd><strong>4号：</strong> -- --- ····</dd>
+      </div>
+      <div class="fact">
+        <dd><strong>5号：</strong> -- --- ·····</dd>
+        <dd><strong>6号：</strong> -····</dd>
+        <dd><strong>7号：</strong> --···</dd>
+        <dd><strong>8号：</strong> ---··</dd>
+        <dd><strong>9号：</strong> ----·</dd>
+        <dd><strong>MO：</strong>（终点前的信号电台） -- ---</dd>
+      </div>
+      <div class="fact">
+        <dd>还想知道英文字母的摩斯电码吗？</dd>
+        <dd>可以跟朋友秘密通话哦~</dd>
+        <a class="btn" href="https://weixin.qq.com/sph/AhPasTe9Kq" target="_blank" rel="noopener noreferrer">
+        听一段魔性音乐就记住啦 →
+      </a>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ===== 装备与能力 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">装备与考验</div>
+    <dl class="factgrid" style="margin:0">
+      <div class="fact">
+        <dt>随身装备</dt>
+        <dd>144MHz / 3.5MHz 测向机、耳机、指北针、地图板、油性笔、指卡</dd>
+      </div>
+      <div class="fact">
+        <dt>考验的能力</dt>
+        <dd>反应力 · 短时决策判断 · 体能 · 毅力 · 方向感</dd>
+      </div>
+      <div class="fact">
+        <dt>单场强度</dt>
+        <dd>6–10 公里林地跑动，全程需要自己找路、自己决策</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ===== 第一视角 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">第一视角体验</div>
+    <div class="linkbar">
+      <p><b>想看看<strong>真实比赛</strong>是什么样的吗？</b>点击链接可跳转微信视频号，无线电测向<strong>国家健将运动员</strong>带你体验无线电测向比赛<strong>第一视角</strong>（手机微信里点开即可播放）。</p>
+      <a class="btn" href="https://weixin.qq.com/sph/AljB7Qhwsb" target="_blank" rel="noopener noreferrer">
+        观看第一视角比赛 →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 图集 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">
+      赛场图集
+      <span class="hint">点击图片可放大</span>
+    </div>
+    
+
+    <div class="masonry gallery-mixed">
+      <figure>
+        <img src="assets/img/ardf2/ardf-finish-2024.jpg" data-zoom="assets/img/ardf2/ardf-finish-2024.jpg"
+             alt="两名运动员在终点箱前打卡" data-cap="马上到终点了，再咬牙坚持一下！！！">
+        <figcaption><b>冲过终点</b> · 运动员们全力冲刺打下终点</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ardf2/ardf-medal-2026.jpg" data-zoom="assets/img/ardf2/ardf-medal-2026.jpg"
+             alt="手举两块 2026 年全国青少年无线电测向锦标赛第一名奖牌" data-cap="感谢两位队友(ToT)">
+        <figcaption><b>两个第一名</b> · 神仙队友助力接力赛夺冠~ ⌯'ᵕ'⌯</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/ardf-guangdong-sprint.jpg" data-zoom="assets/img/sport/ardf-guangdong-sprint.jpg"
+             alt="运动员在开阔场地上全力奔跑冲刺" data-cap="广东省第十七届运动会 · 终点冲刺">
+        <figcaption><b>终点冲刺</b> · 广东省第十七届运动会</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ardf2/ardf-medals-trophies.jpg" data-zoom="assets/img/ardf2/ardf-medals-trophies.jpg"
+             alt="广州代表团的红旗、奖杯与一排金银铜牌" data-cap="金牌是我的 嘻嘻">
+        <figcaption><b>省运会广州队</b> · 一地的奖牌 甚是骄傲٩(ˊᗜˋ*)و</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/ardf-red-shirt.jpg" data-zoom="assets/img/sport/ardf-red-shirt.jpg"
+             alt="背着测向器材、穿红衣服的运动员在楼群间奔跑" data-cap="这时候真年轻啊…">
+        <figcaption><b>奔跑</b> · 在楼宇间穿梭</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/ardf-autumn-601.jpg" data-zoom="assets/img/sport/ardf-autumn-601.jpg"
+             alt="秋色中奔跑的运动员" data-cap="秋色里的找台路">
+        <figcaption><b>终点冲线</b> · 这位是全运会冠军哦~</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/ardf-worldcup-run.jpg" data-zoom="assets/img/sport/ardf-worldcup-run.jpg"
+             alt="运动员在林下全速穿越" data-cap="又要费一条裤子…">
+        <figcaption><b>穿梭树林</b> · 越野越野越野！</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ardf2/ardf-blackboard.jpg" data-zoom="assets/img/ardf2/ardf-blackboard.jpg"
+             alt="黑板上手绘的微功率地图说明" data-cap="赛前讲图 · 黑板上手绘的微功率地图">
+        <figcaption><b>赛前讲解</b> · 教练在黑板上举例说明如何看图找台</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/ardf-clipboard-run.jpg" data-zoom="assets/img/sport/ardf-clipboard-run.jpg"
+             alt="运动员在林中停在点标旗旁看地图" data-cap="看见垃圾袋都以为是橙白相间点标旗Oᴗoಣ">
+        <figcaption><b>终于看见你啦</b> · 打卡！！！</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/ardf-worldcup-map.jpg" data-zoom="assets/img/sport/ardf-worldcup-map.jpg"
+             alt="运动员在林中低头查看透明地图袋" data-cap="我是谁？我在哪？？">
+        <figcaption><b>看图</b> · 然后…迷路</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ardf2/ardf-station-box.jpg" data-zoom="assets/img/ardf2/ardf-station-box.jpg"
+             alt="草地上架在支架上的两台粉白色电台设备" data-cap="藏在草地上的电台">
+        <figcaption><b>点签</b> · 终于找到台啦哈哈哈哈</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ardf2/ardf-equipment-box.jpg" data-zoom="assets/img/ardf2/ardf-equipment-box.jpg"
+             alt="纸箱里装着起点设备、成绩表、布条与器材" data-cap="一堆东西要准备">
+        <figcaption><b>自己组织比赛</b> · 忙到飞起𖦹ᯅ𖦹.ᐟ.ᐟ</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ardf2/ardf-gear-2023.jpg" data-zoom="assets/img/ardf2/ardf-gear-2023.jpg"
+             alt="运动员证件、免接触式计时卡与测向机" data-cap="漏带一个就完蛋啦๑'~'๑">
+        <figcaption><b>每次赛前一数</b> · 指卡、号码簿、测向机、耳机…</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/sport/sport-grass-flag-gate.jpg" data-zoom="assets/img/sport/sport-grass-flag-gate.jpg"
+             alt="草坡上奔跑的运动员与橙色点标旗" data-cap="看我那兴奋的样子𓌉◯𓇋">
+        <figcaption><b>找台途中</b> · 点标旗就像救星</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/track/track-watch-screen.jpg" data-zoom="assets/img/track/track-watch-screen.jpg"
+             alt="手机上的轨迹与配速记录" data-cap="真是疯了…っ- ‸ - ς">
+        <figcaption><b>手表轨迹</b> · 一场比赛10km(:⁍」∠)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== 成绩 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">这项运动给我的</div>
+    <div class="callout">
+      <p>长期练下来，最大的收获不是名次，而是<b>在信息不完整的时候也敢做决定</b>。山里的信号永远有点糊，你不可能等到「完全确定」才出发——先朝最可能的方向跑起来，边跑边修正，这是我在这项运动里学到的最有用的东西。</p>
+      <p style="margin-top:12px">相关的两张证书，放在首页的 <a href="index.html#honor">荣誉与成绩</a> 里。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>周乐曈 · 人工智能学院 2026 级</p>
+    <p><a href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a></p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lightbox" aria-label="放大的图片">
+  <button class="lb__x" type="button" aria-label="关闭">✕</button>
+  <div class="lb__inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

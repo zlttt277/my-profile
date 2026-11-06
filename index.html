@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周乐曈 · 个人主页</title>
+<meta name="description" content="周乐曈，人工智能学院 2026 级。无线电测向国家运动健将、定向越野爱好者、摄影与视频剪辑爱好者。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== 水彩滤镜定义（供页面内 SVG 涂鸦使用） ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5"
+                         xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wc-soft" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="3" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="9"
+                         xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ===== 站点头部 ===== -->
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">曈</span>
+      <span class="brand__text">周乐曈<em>Zhou Letong</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="#about" aria-current="page">简介</a>
+      <a href="#interests">兴趣</a>
+      <a href="#honor">荣誉</a>
+      <a href="#works">作品</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== 主视觉 ===== -->
+  <div class="wrap hero">
+    <div class="hero__grid">
+      <div>
+        <h1 class="hero__name">周乐曈</h1>
+        <p class="hero__latin">Zhou Letong</p>
+        <p class="hero__role">
+          <b>人工智能学院</b> · 2026 级
+        </p>
+        <div class="hero__meta">
+          <span class="chip">外向开朗</span>
+          <span class="chip chip--purple">喜欢尝试新事物</span>
+          <span class="chip chip--pink">运动健将（无线电测向）</span>
+        </div>
+        <p class="hero__quote">
+          跑过山林，也拍过暮色。想把「记录」和「琢磨」这两件事一直坚持下去。
+        </p>
+      </div>
+
+      <aside class="side-card">
+        <p class="side-card__title">快速了解</p>
+        <ul class="side-list">
+          <li><span>所在学院</span><b>人工智能学院·人工智能专业</b></li>
+          <li><span>年级</span><b>2026 级大一</b></li>
+          <li><span>运动等级</span><b>国家运动健将</b></li>
+          <li><span>近期在学</span><b>C++ · Python</b></li>
+          <li><span>联系邮箱</span><b>aprilzltt2008@qq.com</b></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== 个人简介 ===== -->
+  <section class="blk wrap" id="about">
+    <div class="eyebrow">个人简介</div>
+    <div class="card card--plain prose">
+      <p>大家好，我是<strong>周乐曈</strong>，人工智能学院 2026 级新生。我是个比较外向开朗的人，属于「聊三分钟就能熟起来」的那种，喜欢往人群里凑，也爱交朋友^_^。我也十分热爱运动，打羽毛球、匹克球、跑步等等都是我的爱好，欢迎有相同兴趣的朋友约我一起运动~</p>
+      <p>我最大的特点大概是<strong>爱尝试没做过的事</strong>。三年级的时候尝试了<strong>无线电测向</strong>运动，第一次带着测向机在陌生场地里找电台、第一次拿着地图和指北针跑荒无人烟的山林、第一次端着相机认真拍下一场比赛……我会对自己说「要不试试看」。就算做得不够好，但每次也能学到点新东西。</p>
+      <p>跑测向和定向的时候我会戴运动手表记录轨迹，回来把轨迹和赛事地图一起导进 <em>Control Orienteering Analysis</em>，做成一段能回放的路线视频——地图上沿着路线移动的小点就是我自己。哪一步绕了远路、哪个电台找慢了，看一遍就清楚了，比只看成绩单有用得多。</p>
+      <p>除了跑测向和定向，平时也爱约人打<strong>羽毛球</strong>，享受洁白的羽毛球在球拍间翻腾飞翔的美妙，享受和朋友打比赛、切磋球技时的欢声笑语，也享受打球时的大汗淋漓。</p>
+      <p>我出去玩也喜欢背着相机，单反和微单是我最喜欢的<strong>摄影</strong>工具，拍回来的素材也偶尔剪成短片。记录和琢磨，大概是我做所有事情的两条主线。</p>
+      <p>也正因为喜欢琢磨事情背后的原理，我选了人工智能专业，对<strong>编程</strong>这块也越来越有兴趣，从写出短短的"Hello World"，到自己写出一段能解决数学问题的代码、看着程序真的把一件事自动做完，这样的成就感是无法比拟的。</p>
+    </div>
+  </section>
+
+  <!-- ===== 兴趣标签 ===== -->
+  <section class="blk wrap" id="interests">
+    <div class="eyebrow">
+      兴趣标签
+      <span class="hint">点击可查看具体介绍</span>
+    </div>
+    <div class="taggrid">
+
+      <!-- 无线电测向 -->
+      <a class="tagcard" href="interest-ardf.html">
+        <svg class="tagcard__icon" viewBox="0 0 120 60" role="img" aria-label="手持测向机跑步的小人剪影">
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="45" cy="12" r="6.5" fill="currentColor" stroke="none"/>
+            <path d="M45 19 L41 38" stroke-width="8"/>
+            <path d="M44 24 L60 17" stroke-width="7"/>
+            <path d="M43 25 L28 30" stroke-width="7"/>
+            <path d="M41 38 L55 47 L50 58" stroke-width="8"/>
+            <path d="M41 38 L29 47 L16 44" stroke-width="8"/>
+            <g stroke-width="2.4" opacity=".9">
+              <path d="M60 17 L104 10"/>
+              <path d="M69.7 7.3 L72.3 23.2"/>
+              <path d="M82.9 5.2 L85.5 21.1"/>
+              <path d="M96.1 3.1 L98.7 19.0"/>
+            </g>
+          </g>
+        </svg>
+        <h3>无线电测向</h3>
+        <p>一场在山林里进行的大型寻宝游戏，戴着耳机听电波信号辨别方向，一边翻山越野，一边搜寻隐蔽的电台。</p>
+        <span class="tagcard__cta">查看具体介绍</span>
+      </a>
+
+      <!-- 定向越野 -->
+      <a class="tagcard tagcard--sage" href="interest-orienteering.html">
+        <svg class="tagcard__icon" viewBox="0 0 120 60" role="img" aria-label="点标旗与指北针涂鸦">
+          <g fill="none" stroke="currentColor" stroke-linejoin="round">
+            <path d="M24 8 L24 55" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M24 9 L56 9 L56 35 Z" fill="#F0A868" stroke="none"/>
+            <path d="M24 9 L56 35 L24 35 Z" fill="#FFFFFF" stroke="none"/>
+            <rect x="23" y="8" width="34" height="28" stroke-width="2"/>
+            <circle cx="84" cy="32" r="19" stroke-width="2.4"/>
+            <path d="M84 15 L90 32 L78 32 Z" fill="#D9776F" stroke="none"/>
+            <path d="M84 49 L78 32 L90 32 Z" fill="#CFDCE6" stroke="none"/>
+          </g>
+        </svg>
+        <h3>定向越野</h3>
+        <p>拿一张地图，在真实的森林与村落里按顺序找齐打卡点，比拼识图、判断和体能。</p>
+        <span class="tagcard__cta">查看具体介绍</span>
+      </a>
+
+      <!-- 摄影 -->
+      <a class="tagcard tagcard--pink" href="interest-photography.html">
+        <svg class="tagcard__icon" viewBox="0 0 120 60" role="img" aria-label="相机涂鸦">
+          <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="14" y="18" width="92" height="34" rx="8" stroke-width="2.6"/>
+            <path d="M42 18 L46 10 L68 10 L72 18" stroke-width="2.6"/>
+            <circle cx="60" cy="35" r="13" stroke-width="2.6"/>
+            <circle cx="60" cy="35" r="6" stroke-width="2" opacity=".7"/>
+            <circle cx="95" cy="26" r="2.6" fill="currentColor" stroke="none"/>
+          </g>
+        </svg>
+        <h3>摄影</h3>
+        <p>偏爱单反与微单的手动挡，习惯在按快门前就把 ISO、光圈和快门定好，控制画面的明暗与色调氛围。</p>
+        <span class="tagcard__cta">查看具体介绍</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== 荣誉与成绩 ===== -->
+  <section class="blk wrap" id="honor">
+    <div class="eyebrow">荣誉与成绩</div>
+    <p class="sec-lead" style="margin-bottom:22px">
+      十来年的训练换来的两张证书，这是对测向的<strong>热爱</strong>所带来的。
+    </p>
+    <div class="honorlist">
+
+      <article class="honor">
+        <div class="honor__img">
+          <img src="assets/img/honor/honor-certificate.jpg"
+               alt="国家运动健将证书" data-zoom="assets/img/honor/honor-certificate.jpg"
+               data-cap="国家运动健将证书 · 无线电测向">
+        </div>
+        <div>
+          <span class="medal">国家运动健将</span>
+          <h3>国家健将称号</h3>
+          <p>15岁时跨组参赛，在2023 年全国无线电测向锦标赛W21组（成年组）无线电测向（3.5MHz、144MHz）个人全能、单项个人第一名。由国家体育总局航空无线电模型运动管理中心授予「运动健将」称号。</p>
+          <p style="margin-top:8px;color:var(--ink-3);font-size:12.5px">2023 年 12 月 · 四川成都</p>
+        </div>
+      </article>
+
+      <article class="honor">
+        <div class="honor__img">
+          <img src="assets/img/honor/honor-guangdong-poster.jpg"
+               alt="广东省第十七届运动会夺冠海报" data-zoom="assets/img/honor/honor-guangdong-poster.jpg"
+               data-cap="广东省第十七届运动会 · 无线电测向女子个人赛冠军">
+        </div>
+        <div>
+          <span class="medal">省运会冠军</span>
+          <h3>广东省第十七届运动会 · 无线电测向女子个人赛冠军</h3>
+          <p>代表广州体育代表团出战群众赛事活动定测向比赛，拿下无线电测向女子个人赛冠军，也是代表团当届第 10 项金牌。</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 作品展示 ===== -->
+  <section class="blk wrap" id="works">
+    <div class="eyebrow">
+      作品展示
+      <span class="hint">点击箭头进入案例页</span>
+    </div>
+    <div class="workgrid">
+
+      <a class="workcard" href="work-track.html">
+        <div class="workcard__thumb">
+          <img src="assets/img/track/track-map-3_5mhz.jpg" alt="无线电测向3.5MHz 赛区地图">
+        </div>
+        <div class="workcard__body">
+          <span class="workcard__no">作品 01</span>
+          <h3>定向轨迹回放视频</h3>
+          <p>运动手表记录 GPS 轨迹，回家把轨迹与赛事地图一起导入 Control Orienteering Analysis，导出成「小点沿真实路线移动」的回放视频，用来复盘每一次绕路。</p>
+          <span class="workcard__cta">查看案例</span>
+        </div>
+      </a>
+
+      <a class="workcard" href="work-photography.html">
+        <div class="workcard__thumb">
+          <img src="assets/img/photo/photo-09.jpg" alt="海浪拍打礁石与远处的灯塔">
+        </div>
+        <div class="workcard__body">
+          <span class="workcard__no">作品 02</span>
+          <h3>摄影作品集</h3>
+          <p>用单反与微单拍下的一批照片，按建筑、天象、自然、城市夜景与长城五组归置，每一组都说清楚我在那一组里想留住什么。</p>
+          <span class="workcard__cta">查看案例</span>
+        </div>
+      </a>
+
+      <a class="workcard" href="work-video.html">
+        <div class="workcard__thumb">
+          <img src="assets/img/qr-video-channel.jpg" alt="微信视频号「蛋驼骆」二维码">
+        </div>
+        <div class="workcard__body">
+          <span class="workcard__no">作品 03</span>
+          <h3>视频 · 短片剪辑</h3>
+          <p>从素材整理、选片、配乐到调色转场，独立完成短片剪辑。也帮同学剪过社团活动的回顾片。</p>
+          <span class="workcard__cta">查看案例</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== 我能为社团做什么 ===== -->
+  <section class="blk wrap" id="skills">
+    <div class="eyebrow">我能为社团做什么</div>
+    <div class="card card--tint">
+      <div class="chips" style="margin-bottom:18px">
+        <span class="chip">活动跟拍</span>
+        <span class="chip chip--purple">物料排版</span>
+        <span class="chip chip--pink">短片剪辑</span>
+        <span class="chip chip--sage">写点小工具 / 小脚本</span>
+        <span class="chip chip--plain">现场跑腿</span>
+        <span class="chip chip--plain">拉人组队</span>
+        <span class="chip chip--plain">带新人跑训练</span>
+      </div>
+      <div class="prose">
+        <p>加入社团这件事，我想的不是「能拿到什么」，而是<strong>能搭上什么手</strong>。上面这些活我都不挑：需要有人扛着相机跟一整天比赛，我可以；宣传物料要排版，我可以；活动回顾要剪成片子，我可以；训练要人带，我也可以。</p>
+        <p>如果社团在做一个跟数据、跟代码有关的小东西，我也很想参与——哪怕一开始只能写点边角料脚本，只要它能真的跑起来，我就很开心。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 联系方式 ===== -->
+  <section class="blk wrap" id="contact">
+    <div class="eyebrow">联系方式</div>
+    <div class="contact-card">
+      <div class="contact-card__t">
+        <b>欢迎通过邮件联系我</b>
+        社团招新、组队参赛、约拍或技术交流，随时来信，我基本每天都会查看邮箱。
+      </div>
+      <a class="btn" href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>周乐曈 · 人工智能学院 2026 级</p>
+    <p><a href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a></p>
+  </div>
+</footer>
+
+<!-- ===== 灯箱 ===== -->
+<dialog class="lb" id="lightbox" aria-label="放大的图片">
+  <button class="lb__x" type="button" aria-label="关闭">✕</button>
+  <div class="lb__inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

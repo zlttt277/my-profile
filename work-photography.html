@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>摄影作品集 · 作品 02 · 周乐曈</title>
+<meta name="description" content="19 张摄影作品，按建筑、天象、自然、城市夜景与长城五组整理。单反与微单手动挡拍摄，自己完成后期调色。">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ---- 纯 CSS 分组筛选（radio + 兄弟选择器，无 JavaScript） ---- */
+  .pf { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+  .pfbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .pfbar label {
+    cursor: pointer; font-size: 13px; letter-spacing: .02em;
+    padding: 7px 16px; border-radius: 999px;
+    background: rgba(255,255,255,.82); border: 1px solid var(--line); color: var(--ink-2);
+  }
+  .pfbar label:hover { border-color: var(--blue-300); color: var(--blue-700); }
+  #pf-all:checked  ~ .pfbar label[for="pf-all"],
+  #pf-arch:checked ~ .pfbar label[for="pf-arch"],
+  #pf-sky:checked  ~ .pfbar label[for="pf-sky"],
+  #pf-nat:checked  ~ .pfbar label[for="pf-nat"],
+  #pf-city:checked ~ .pfbar label[for="pf-city"],
+  #pf-wall:checked ~ .pfbar label[for="pf-wall"] {
+    background: var(--blue-600); border-color: var(--blue-600); color: #fff; font-weight: 500;
+  }
+  #pf-arch:checked ~ .gal .grp:not([data-g="arch"]),
+  #pf-sky:checked  ~ .gal .grp:not([data-g="sky"]),
+  #pf-nat:checked  ~ .gal .grp:not([data-g="nat"]),
+  #pf-city:checked ~ .gal .grp:not([data-g="city"]),
+  #pf-wall:checked ~ .gal .grp:not([data-g="wall"]) { display: none; }
+
+  .gal .group + .group { margin-top: 52px; }
+  .gal .chips { margin-bottom: 18px; }
+
+  /* 竖幅作品：不裁切，原样按竖屏显示 */
+  .fig--portrait img { width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wc-soft" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="3" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <linearGradient id="dusk2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B6D5EC"/><stop offset="1" stop-color="#F0BFCE"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">曈</span>
+      <span class="brand__text">周乐曈<em>Zhou Letong</em></span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#about">简介</a>
+      <a href="index.html#interests">兴趣</a>
+      <a href="index.html#honor">荣誉</a>
+      <a href="index.html#works" aria-current="page">作品</a>
+      <a href="index.html#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap detail-hero">
+    <a class="backlink" href="index.html#works">← 返回首页 · 作品展示</a>
+    <div class="detail-hero__grid" style="grid-template-columns:1.7fr .7fr">
+      <div>
+        <p class="workcard__no" style="font-size:12px">作品 02</p>
+        <h1>摄影作品集</h1>
+        <p class="lead">
+          这里是我用单反和微单拍下的一批照片，一共 <strong>19 张</strong>，按色调和风景种类分成五组。
+          我拍照的时候习惯用手动挡，按快门前就把 ISO、光圈和快门定下来，回来之后再自己调色。        </p>
+        <div class="chips" style="margin-top:22px">
+          <span class="chip">单反 / 微单</span>
+          <span class="chip chip--pink">手动挡 M</span>
+          <span class="chip chip--purple">后期自己调色</span>
+          <span class="chip chip--sage">19 张 · 5 组</span>
+        </div>
+      </div>
+      <figure class="doodle" style="margin:0">
+        <svg viewBox="0 0 200 150" style="width:100%;max-width:230px;margin:0 auto" role="img"
+             aria-label="相框与风景的水彩涂鸦">
+          <ellipse cx="100" cy="132" rx="76" ry="13" fill="#F0BFCE" opacity=".4" filter="url(#wc-soft)"/>
+          <g transform="rotate(-4 100 66)">
+            <rect x="30" y="20" width="140" height="104" rx="5" fill="#fff" stroke="#D6E1EA" stroke-width="2"/>
+            <rect x="38" y="28" width="124" height="80" fill="url(#dusk2)"/>
+            <circle cx="122" cy="50" r="12" fill="#FFF3DA"/>
+            <path d="M38 84 L66 58 L92 84 Z" fill="#9C85C5" opacity=".55"/>
+            <path d="M84 88 L112 58 L146 88 Z" fill="#8FA9C8" opacity=".6"/>
+            <rect x="38" y="90" width="124" height="18" fill="#8FB9DC" opacity=".7"/>
+            <g stroke="#fff" stroke-width="1.8" opacity=".6" stroke-linecap="round">
+              <path d="M50 99 L70 99"/><path d="M92 104 L120 104"/><path d="M132 97 L152 97"/>
+            </g>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== 图集 ===== -->
+  <section class="blk wrap" id="gallery">
+    <div class="eyebrow">
+      全部作品
+      <span class="hint">点击分组可筛选 · 点击图片可放大</span>
+    </div>
+
+    <!-- 纯 CSS 筛选：这些 radio 必须是 .pfbar 与 .gal 的前兄弟 -->
+    <input class="pf" type="radio" name="pf" id="pf-all" checked>
+    <input class="pf" type="radio" name="pf" id="pf-arch">
+    <input class="pf" type="radio" name="pf" id="pf-sky">
+    <input class="pf" type="radio" name="pf" id="pf-nat">
+    <input class="pf" type="radio" name="pf" id="pf-city">
+    <input class="pf" type="radio" name="pf" id="pf-wall">
+
+    <div class="pfbar" role="group" aria-label="按分组筛选">
+      <label for="pf-all">全部 19 张</label>
+      <label for="pf-arch">金瓦朱墙 3</label>
+      <label for="pf-sky">晨昏霞色 7</label>
+      <label for="pf-nat">自然与生活 3</label>
+      <label for="pf-city">城市夜行 4</label>
+      <label for="pf-wall">关山万里 2</label>
+    </div>
+
+    <div class="gal">
+
+      <!-- 一 · 金瓦朱墙 -->
+      <div class="group grp" data-g="arch">
+        <div class="gallery-head">
+          <h3>一 · 金瓦朱墙</h3>
+          <p>故宫的建筑与光影</p>
+        </div>
+        <div class="chips">
+          <span class="chip chip--plain">朱红 · 鎏金 · 苍翠</span>
+          <span class="chip chip--sage">前景遮挡构图</span>
+          <span class="chip chip--plain">长焦压缩</span>
+        </div>
+        <div class="masonry">
+          <figure>
+            <img src="assets/img/photo/photo-01.jpg" data-zoom="assets/img/photo/photo-01.jpg"
+                 alt="松枝后的故宫殿脊" data-cap="松枝后的殿脊">
+            <figcaption><b>松枝后的殿脊</b> · 让松枝虚掉一半当框，视线自然就被推到屋顶上</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-02.jpg" data-zoom="assets/img/photo/photo-02.jpg"
+                 alt="红墙与琉璃脊兽" data-cap="红墙与琉璃脊兽">
+            <figcaption><b>红墙与脊兽</b> · 一组很纯粹的红、黄、绿，等一朵云让屋瓦反一点光</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-18.jpg" data-zoom="assets/img/photo/photo-18.jpg"
+                 alt="树影间的角楼" data-cap="树影间的角楼">
+            <figcaption><b>树影间的角楼</b> · 找了好久才等到这个角度，树影刚好把角楼框在中间</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 二 · 晨昏霞色 -->
+      <div class="group grp" data-g="sky">
+        <div class="gallery-head">
+          <h3>二 · 晨昏霞色</h3>
+          <p>日落、雪霁、云海：光线变化最快的那些时刻</p>
+        </div>
+        <div class="chips">
+          <span class="chip chip--pink">橙红 · 暮金</span>
+          <span class="chip chip--purple">雾霾紫 · 青蓝</span>
+          <span class="chip chip--plain">压高光、提暗部</span>
+          <span class="chip chip--plain">以剪影为主</span>
+        </div>
+        <div class="masonry">
+          <figure>
+            <img src="assets/img/photo/photo-13.jpg" data-zoom="assets/img/photo/photo-13.jpg"
+                 alt="日落时的亭台与栈桥剪影" data-cap="日落亭台与栈桥">
+            <figcaption><b>亭台与栈桥</b> · 天空占了整张照片的四分之三，地上只留一道黑边</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-15.jpg" data-zoom="assets/img/photo/photo-15.jpg"
+                 alt="暮色里的亭与海滩" data-cap="暮色里的亭与海滩">
+            <figcaption><b>暮色里的亭</b> · 同一片海滩，晚二十分钟就换了一整套颜色</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-14.jpg" data-zoom="assets/img/photo/photo-14.jpg"
+                 alt="暮色滩涂上的人影" data-cap="暮色滩涂上的人影">
+            <figcaption><b>滩涂上的人影</b> · 我最喜欢的一张。人影只剩形状，反而更有故事</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-05.jpg" data-zoom="assets/img/photo/photo-05.jpg"
+                 alt="雪后夕阳与飞鸟" data-cap="雪后夕阳与飞鸟">
+            <figcaption><b>雪后夕阳</b> · 撞见一只飞过的鸟，按快门的时候手都在抖</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-06.jpg" data-zoom="assets/img/photo/photo-06.jpg"
+                 alt="云海之上的国旗" data-cap="云海之上的国旗">
+            <figcaption><b>云海之上</b> · 爬上来的时候云正好漫过山脊，红和蓝撞得很干净</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-07.jpg" data-zoom="assets/img/photo/photo-07.jpg"
+                 alt="雪林落日" data-cap="雪林落日">
+            <figcaption><b>雪林落日</b> · 太阳卡在树干之间，雪地反着很淡的蓝</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-04.jpg" data-zoom="assets/img/photo/photo-04.jpg"
+                 alt="山脊上的弯月" data-cap="山脊上的弯月">
+            <figcaption><b>山脊上的弯月</b> · 曝光压到很低，只留下月牙和一条山脊线</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 三 · 自然与生活 -->
+      <div class="group grp" data-g="nat">
+        <div class="gallery-head">
+          <h3>三 · 自然与生活</h3>
+          <p>山、海、还有一只躲在门后面的猫</p>
+        </div>
+        <div class="chips">
+          <span class="chip chip--sage">清透绿 · 海蓝</span>
+          <span class="chip chip--plain">大光圈虚化</span>
+          <span class="chip chip--plain">高速快门凝固浪花</span>
+        </div>
+        <div class="masonry">
+          <figure>
+            <img src="assets/img/photo/photo-09.jpg" data-zoom="assets/img/photo/photo-09.jpg"
+                 alt="海浪拍打礁石，远处有灯塔" data-cap="海浪与灯塔">
+            <figcaption><b>海浪与灯塔</b> · 快门定在很快的位置，把浪花冻在半空中</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-03.jpg" data-zoom="assets/img/photo/photo-03.jpg"
+                 alt="木桩上的蝴蝶" data-cap="木桩上的蝴蝶">
+            <figcaption><b>木桩上的蝴蝶</b> · 微距。凑得很近，屏住呼吸才没把它惊走</figcaption>
+          </figure>
+          <figure class="fig--portrait">
+            <img src="assets/img/photo/photo-08.jpg" data-zoom="assets/img/photo/photo-08.jpg"
+                 alt="门缝里的猫" data-cap="门缝里的猫">
+            <figcaption><b>门缝里的猫</b> · 它只肯露半个身子，那正好是构图最舒服的宽度</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 四 · 城市夜行 -->
+      <div class="group grp" data-g="city">
+        <div class="gallery-head">
+          <h3>四 · 城市夜行</h3>
+          <p>香港的街、车、灯光和收尾的那场烟花</p>
+        </div>
+        <div class="chips">
+          <span class="chip chip--plain">青橙对比</span>
+          <span class="chip chip--purple">低感光夜拍</span>
+          <span class="chip chip--plain">竖幅街拍</span>
+        </div>
+        <div class="masonry">
+          <figure class="fig--portrait">
+            <img src="assets/img/photo/photo-12.jpg" data-zoom="assets/img/photo/photo-12.jpg"
+                 alt="夜色中亮着灯光的城堡与红色烟花" data-cap="城堡烟花">
+            <figcaption><b>城堡烟花</b> · 整场都偏红，索性顺着这个色调走到底</figcaption>
+          </figure>
+          <figure class="fig--portrait">
+            <img src="assets/img/photo/photo-19.jpg" data-zoom="assets/img/photo/photo-19.jpg"
+                 alt="香港街上的车辆、老爷车与行人" data-cap="街头车流">
+            <figcaption><b>街头车流</b> · 站在路边等一辆深色的车开进光里</figcaption>
+          </figure>
+          <figure class="fig--portrait">
+            <img src="assets/img/photo/photo-11.jpg" data-zoom="assets/img/photo/photo-11.jpg"
+                 alt="夜色里的中环码头钟楼与 CENTRAL PIER 字样" data-cap="中环码头钟楼">
+            <figcaption><b>中环码头</b> · 夜里钟面被照得很亮，衬得背后一整片是黑的</figcaption>
+          </figure>
+          <figure class="fig--portrait">
+            <img src="assets/img/photo/photo-10.jpg" data-zoom="assets/img/photo/photo-10.jpg"
+                 alt="叮叮车与路面上的 BUS STOP 字样" data-cap="叮叮车与 BUS STOP">
+            <figcaption><b>叮叮车</b> · 低角度把路面的字一起收进来，照片就有了地点</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 五 · 关山万里 -->
+      <div class="group grp" data-g="wall">
+        <div class="gallery-head">
+          <h3>五 · 关山万里</h3>
+          <p>长城，以及它背后的一整片绿</p>
+        </div>
+        <div class="chips">
+          <span class="chip chip--sage">层叠绿</span>
+          <span class="chip chip--pink">一点红</span>
+          <span class="chip chip--plain">广角 · 长焦各一版</span>
+        </div>
+        <div class="masonry masonry--two">
+          <figure>
+            <img src="assets/img/photo/photo-17.jpg" data-zoom="assets/img/photo/photo-17.jpg"
+                 alt="群山中的长城" data-cap="群山中的长城">
+            <figcaption><b>群山中的长城</b> · 用长焦把山脊一层层压在一起，能看出它有几十公里长</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/photo/photo-16.jpg" data-zoom="assets/img/photo/photo-16.jpg"
+                 alt="长城上的国旗" data-cap="长城上的国旗">
+            <figcaption><b>长城上的国旗</b> · 风正好把旗吹开，让红旗占住画面的左上角</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 拍摄信息 ===== -->
+  <section class="blk wrap">
+    <div class="eyebrow">关于这批照片</div>
+    <dl class="factgrid" style="margin:0">
+      <div class="fact">
+        <dt>器材</dt>
+        <dd>单反负责认真拍，微单随身记录。扫街基本靠微单加一支定焦，拍风景和建筑时换长焦。</dd>
+      </div>
+      <div class="fact">
+        <dt>拍摄方式</dt>
+        <dd>几乎全程手动挡（M）。拍照前先把 ISO、光圈和快门都定好：白天光线足就把感光度压到最低，暗下来再往上抬一档。</dd>
+      </div>
+      <div class="fact">
+        <dt>后期</dt>
+        <dd>自己调色，仍在学习阶段。主要做压高光、提阴影，再单独调整一两个颜色的色相。</dd>
+      </div>
+    </dl>
+
+    <div class="linkbar" style="margin-top:20px">
+      <p>想了解我为什么偏爱手动挡、以及具体怎么调色，可以看兴趣页里的说明。</p>
+      <a class="btn btn--ghost" href="interest-photography.html">关于摄影这件事 →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>周乐曈 · 人工智能学院 2026 级</p>
+    <p><a href="mailto:aprilzltt2008@qq.com">aprilzltt2008@qq.com</a></p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lightbox" aria-label="放大的图片">
+  <button class="lb__x" type="button" aria-label="关闭">✕</button>
+  <div class="lb__inner">
+    <img id="lb-img" src="" alt="">
+    <p class="lb__cap" id="lb-cap"></p>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
